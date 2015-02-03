@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="sketch/sketch.js"></script>
+    <link rel="stylesheet" href="css/drawing.css">
+</head>
+<body>
+    <div class="canvaswrapper">
+        <canvas id="colors_sketch" width="800" height="800"></canvas>
+        <script type="text/javascript">
+            $(function() {
+                $.each(['#f00', '#ff0', '#0f0', '#0ff', '#00f', '#f0f', '#000', '#fff'], function() {
+                    $('#colors_demo .tools').append("<a href='#colors_sketch' data-color='" + this + "' style='width: 10px; background: " + this + ";'></a> ");
+                });
+                $.each([3, 5, 10, 15], function() {
+                    $('#colors_demo .tools').append("<a href='#colors_sketch' data-size='" + this + "' style='background: #ccc'>" + this + "</a> ");
+                });
+                $('#colors_sketch').sketch();
+            });
+        </script>
+        <div class="tools">
+            <div id="redsquare">
+                <a href="#colors_sketch" data-color="red" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+            <div id="redorangesquare">
+                <a href="#colors_sketch" data-color="indianred" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+            <div id="orangesquare">
+                <a href="#colors_sketch" data-color="orange" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+            <div id="yellowsquare">
+                <a href="#colors_sketch" data-color="yellow" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+            <div id="greenyellowsquare">
+                <a href="#colors_sketch" data-color="greenyellow" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+            <div id="greensquare">
+                <a href="#colors_sketch" data-color="green" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+            <div id="cyansquare">
+                <a href="#colors_sketch" data-color="cyan" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+            <div id="bluesquare">
+                <a href="#colors_sketch" data-color="blue" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+            <div id="violetsquare">
+                <a href="#colors_sketch" data-color="violet" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+            <div id="magentasquare">
+                <a href="#colors_sketch" data-color="magenta" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+            <div id="indigosquare">
+                <a href="#colors_sketch" data-color="indigo" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+            <div id="blacksquare">
+                <a href="#colors_sketch" data-color="black" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+            <div id="whitesquare">
+                <a href="#colors_sketch" data-color="white" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+            <div id="randomsquare">
+                <a href="#colors_sketch" data-color="grey" style="float: left; width: 50px; height: 50px;"></a>
+            </div>
+        </div>
+        <!--<a href="#colors_sketch" data-download="png" style="float: right; width: 100px;">Download</a>-->
+    </div>
+</body>
+</html>
